@@ -13,16 +13,11 @@ class Solution {
             m+=1;
         }
         Arrays.sort(res);
-        System.out.println(Arrays.toString(res));
         int index = resArrlen/2;
         int rem= resArrlen %2;
-        System.out.println("index---"+index);
-        System.out.println("rem----"+rem);
         if(rem==0)
         {
-            double sum=(res[index]+res[index-1])/2.0;
-            System.out.println("sum-----"+sum);
-            return sum;
+            return (res[index]+res[index-1])/2.0;
         }
         else{
             return res[index];
