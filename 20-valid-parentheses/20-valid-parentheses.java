@@ -1,17 +1,10 @@
 class Solution {
-    public boolean isOpenBrace(char c){
-	        char[] openBraces={'{','[','('};
-	        for(char item:openBraces)
-	        {
-	        	if(item==c)
-	        	{
-	        		 return true;
-	        	}
-	        }
-	           
+    /*public boolean isOpenBrace(char c){
+	       if(c=='{'||c=='('||c=='[')
+        		 return true;      
 	        return false;
 	    }
-	    public boolean isValid(String s) {
+    public boolean isValid(String s) {
 	        
 	        char ch[] = s.toCharArray();
 	        Stack<Character> stk = new Stack<>();
@@ -46,5 +39,26 @@ class Solution {
 	                }
 	            }         
 	        return balanced;
-	    }
+	    }*/
+    
+    public boolean isValid(String s) {
+        Stack<Character> stack=new Stack<Character>();
+        
+        char[] ch=s.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(stack.isEmpty()){
+                stack.push(ch[i]);
+            }else if(stack.peek()=='(' && ch[i]==')'){
+                stack.pop();
+            }else if(stack.peek()=='[' && ch[i]==']'){
+                stack.pop();
+            }else if(stack.peek()=='{' && ch[i]=='}'){
+                stack.pop();
+            }else{
+                stack.push(ch[i]);
+            }
+        }
+        
+        return stack.isEmpty();
+    }
 }
