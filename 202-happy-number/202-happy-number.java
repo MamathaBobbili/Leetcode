@@ -8,7 +8,7 @@ class Solution {
 	        if(sum==1)
 	            return true;
 	        else{
-	        	if(list.contains(sum))
+	        	if(list.contains(sum)) //to detect cycle
 	        		return false;
 	        	list.add(sum);
 	            return calculateSumofSquares(sum,0,list);
