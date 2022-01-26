@@ -1,5 +1,5 @@
 class Solution {
-    /*public boolean isOpenBrace(char c){
+    public boolean isOpenBrace(char c){
 	       if(c=='{'||c=='('||c=='[')
         		 return true;      
 	        return false;
@@ -39,9 +39,9 @@ class Solution {
 	                }
 	            }         
 	        return balanced;
-	    }*/
+	    }
     
-    public boolean isValid(String s) {
+    /*public boolean isValid(String s) {
         Stack<Character> stack=new Stack<Character>();
         
         char[] ch=s.toCharArray();
@@ -60,5 +60,5 @@ class Solution {
         }
         
         return stack.isEmpty();
-    }
+    }*/
 }
