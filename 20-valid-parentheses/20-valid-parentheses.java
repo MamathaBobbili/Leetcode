@@ -13,7 +13,7 @@ class Solution {
 	    }
 	    public boolean isValid(String s) {
 	        
-	         char ch[] = s.toCharArray();
+	        char ch[] = s.toCharArray();
 	        Stack<Character> stk = new Stack<>();
 	        Map<Character,Character>  map = new HashMap<>();
 	        boolean balanced=false;
@@ -23,11 +23,11 @@ class Solution {
 	        for(int c=0;c<ch.length;c++)
 	        {
 	        	if(isOpenBrace(ch[c])){
-	                    stk.push(ch[c]);
-	                    balanced= false;
+	                    stk.push(ch[c]); //Keep pushing onto stack if input is an Open brace
+	                    balanced= false; // have to make it false for "[]("
 	                }
 	                else{
-	                	if(stk.isEmpty())
+	                	if(stk.isEmpty()) // "[]{}}"
 	                		return false;
 	                	else{
 		                    char popchar = stk.pop();
@@ -37,10 +37,10 @@ class Solution {
 		                        {
 		                        	balanced= true;
                                     if(c==ch.length-1 && !stk.isEmpty())
-		                        		return false;
+		                        		return false; // "{[]"
 		                        }
 		                        else
-		                        	return false;
+		                        	return false;  //"({{{{}}}))"
 		                    }
 	                	}
 	                }
