@@ -1,13 +1,26 @@
 class Solution {
-    /** Memoization : Top Down approach 
+    /** Recusrsion with overlapping subproblems **/ 
+    
+    // public int fib(int n) {
+    //     if(n<=1)
+    //         return n;
+    //     else
+    //         return fib(n-1)+fib(n-2);
+    // }
+    
+      /** Memoization : Top Down approach 
     Start from the given number and to base case
     **/ 
-    
-    public int fib(int n) {
+    public static int findfib(int n,int[] dp) {
         if(n<=1)
             return n;
-        else
-            return fib(n-1)+fib(n-2);
+        if(dp[n]!=-1) return dp[n];
+        return findfib(n-1,dp)+findfib(n-2,dp);
+    }
+    public int fib(int n) {
+        int[] dp = new int[n+1];
+        Arrays.fill(dp,-1);
+        return findfib(n,dp);
     }
     
     /** Tabulation: Bottom Up approach
