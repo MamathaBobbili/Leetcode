@@ -13,3 +13,8 @@ take right value (c)   |  shash 0 1 1...
 2.Recursion Window Technique :
 * Find all anagrams for the given string p using recursion method
 * Take all anagrams and check each anagram present in String s,if present add index to result
+
+Recursion Method : 
+
+*   Find all anagrams for given String p 
+*   Take one by one anagram and check in String s , if found add index to result 
