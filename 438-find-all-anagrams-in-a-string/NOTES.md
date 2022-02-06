@@ -18,3 +18,15 @@ Recursion Method :
 
 *   Find all anagrams for given String p 
 *   Take one by one anagram and check in String s , if found add index to result 
+
+Recursion Tree : To find anagrams  
+                abc                         
+            a       b       c           
+        b     c    a  c    a  b
+      c        b   c   a   b   a
+      
+        abc,acb,bac,bca,cab,cba     
+                    abab
+                a   b   a   b 
+               b    a   b   a 
+
