@@ -25,13 +25,11 @@ class Solution {
         	shash[s.charAt(right)-'a']=shash[s.charAt(right)-'a']+1;
         	shash[s.charAt(left)-'a']=shash[s.charAt(left)-'a']-1;
         	left++;
-        	//right++;
-        }
+         }
        return indexes; 
     }
 	private boolean compare(int[] phash, int[] shash) {
-		// TODO Auto-generated method stub
-		
+
 		for(int j=0;j<phash.length;j++){
 			if(phash[j]!=shash[j])
 				return false;
@@ -94,18 +92,7 @@ class Solution {
 		return indexes;
         
     }
-
+*/
 
  
- Recursion Tree : To find anagrams  
-                abc                         
-            a       b       c           
-        b     c    a  c    a  b
-      c        b   c   a   b   a
-      
-        abc,acb,bac,bca,cab,cba     
-
-                    abab
-                a   b   a   b 
-               b    a   b   a 
-**/
+ 
