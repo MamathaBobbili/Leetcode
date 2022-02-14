@@ -16,7 +16,10 @@
 class Solution {
     public int maxDepth(TreeNode root) {
         
-        if(root == null) {
+                    
+       /** Iterative approach 
+       
+       if(root == null) {
 	        return 0;
 	    }
 		int level=0;
@@ -43,5 +46,22 @@ class Solution {
 				
 		return level;
         
+       **/ 
+        
+        /**Recursive method **/
+    
+        if(root == null) {
+	        return 0;
+	    }
+        return 1+Math.max(maxDepth(root.left),maxDepth(root.right));
+        
+        /**Recursion Tree 
+                    [3] 1+(1,2)---3
+                /       \
+    --1 1+(0,0)[9]       [20] 1+(1,1) ---2
+                        /   \
+            1---- 1+(0,0)  [15] [7] 1+(0,0) ---1
+                        
+        **/
     }
 }
