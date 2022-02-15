@@ -1,4 +1,16 @@
-class Solution {
+class Solution {   
+    
+    /** Using Bit Manipulation XOR method **/
+    public int singleNumber(int[] nums) { 
+        int ans =0;
+
+        int len = nums.length;
+        for(int i=0;i!=len;i++)
+            ans ^= nums[i];
+
+        return ans;
+    }
+    /** Using two pointers
     public int singleNumber(int[] nums) {       
         
         if(nums.length % 2 ==0)
@@ -34,5 +46,5 @@ class Solution {
 			
 		}	
 		return curr;        
-    }
+    }**/
 }
