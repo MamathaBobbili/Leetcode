@@ -23,6 +23,10 @@ class Solution {
     }**/
     
     /** Using two pointers
+    
+    i != j --> j++
+    i == j --> a[i]=Max,a[j]=Max,curr=Max,i++;j++
+    
     public int singleNumber(int[] nums) {       
         
         if(nums.length % 2 ==0)
