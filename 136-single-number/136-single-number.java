@@ -1,6 +1,17 @@
 class Solution {   
     
-    /** Using Bit Manipulation XOR method **/
+    /** Using Hashset method **/
+    public int singleNumber(int[] nums) { 
+    Set<Integer> s = new HashSet<Integer>();
+	    for (int i: nums){
+	    	if(!s.add(i)){
+	    		s.remove(i);
+	    	}
+	    }
+	    return s.iterator().next();
+    }
+    
+    /** Using Bit Manipulation XOR method 
     public int singleNumber(int[] nums) { 
         int ans =0;
 
@@ -9,7 +20,8 @@ class Solution {
             ans ^= nums[i];
 
         return ans;
-    }
+    }**/
+    
     /** Using two pointers
     public int singleNumber(int[] nums) {       
         
